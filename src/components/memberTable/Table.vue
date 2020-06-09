@@ -26,7 +26,7 @@ import { getAllMembers } from "../../api/memberAPI";
 export default Vue.extend({
   name: "MemberTable",
   props: {
-    organization: { String, default: "lemoncode" }
+    organization: { type: String, default: "lemoncode" }
   },
   components: { MemberHead, MemberRow },
   data: () => ({
