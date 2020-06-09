@@ -1,14 +1,15 @@
 <template>
   <div>
     <h2>Member Page</h2>
+    <input v-model="organization" />
     <button @click="loadMembers">Load</button>
     <table :class="$style.table">
       <thead>
-        <member-head/>
+        <member-head />
       </thead>
       <tbody>
         <template v-for="member in members">
-          <member-row :key="member.id" :member="member"/>
+          <member-row :key="member.id" :member="member" />
         </template>
       </tbody>
     </table>
@@ -24,13 +25,16 @@ import { getAllMembers } from "../../api/memberAPI";
 
 export default Vue.extend({
   name: "MemberTable",
+  props: {
+    organization: { String, default: "lemoncode" }
+  },
   components: { MemberHead, MemberRow },
   data: () => ({
     members: [] as Member[]
   }),
   methods: {
     loadMembers: function() {
-      getAllMembers("lemoncode").then(members => {
+      getAllMembers(this.organization).then(members => {
         this.members = members;
       });
     }

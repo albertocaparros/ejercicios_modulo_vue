@@ -1,4 +1,5 @@
 # Intro
+
 El objetivo de este ejercicio es el que te familiarizes con VueJS.
 
 Tomaremos como punto de entrada una aplicación que muestra una lista de miembros que pertenecen a la organización Lemoncode de Github
@@ -7,7 +8,8 @@ Tomaremos como punto de entrada una aplicación que muestra una lista de miembro
 Añadiremos un input que permite al usuario cambiar dicho nombre de grupo y elegir el que quiera, por ejemplo quiero ver los miembros de la
 organización Microsoft
 
-#Ejercicio
+# Ejercicio
+
 Arranca con el proyecto que se encuentra en la carpeta 00_start.
 
 Instala las dependencias.
@@ -21,6 +23,7 @@ que el usuario pudiera teclear el nombre de la organización que quisiera, y al 
 organización que hubiera tecleado (ejemplo de organizaciones válidas: microsoft, facebook)
 
 # Pistas:
+
 - Create una nueva entrada en el estado del componente membersTable y que por defecto valga lemoncode.
 - Crea un input al lado del botón de carga. Este botón mostrará la organización actual elegida (estado creado en paso anterior).
 - Enlaza el evento onChange para que detecte que cuando cambie, actualize el estado del campo organización.
